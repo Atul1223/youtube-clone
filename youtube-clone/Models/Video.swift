@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct video : Decodable{
+struct Video : Decodable{
     
     var videoId = ""
     var title = ""
@@ -20,7 +20,7 @@ struct video : Decodable{
         case snippet
         case thumbnails
         case high
-        case resourceID
+        case resourceId
         
         case published = "publishedAt"
         case title = "title"
@@ -30,7 +30,7 @@ struct video : Decodable{
         
     }
     
-    init(from decoder: Decoder) throws {
+    init (from decoder: Decoder) throws {
         
        let container = try decoder.container(keyedBy : CodingKeys.self)
         
@@ -53,8 +53,8 @@ struct video : Decodable{
         self.thumbnail = try highContainer.decode(String.self, forKey: .thumbnail)
         
         //parse videoID
-        let resourceIdContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .resourceID)
-        videoId.self = try resourceIdContainer.decode(String.self, forKey: .videoID)
+        let resourceIdContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .resourceId)
+        self.videoId = try resourceIdContainer.decode(String.self, forKey: .videoID)
         
         
     }

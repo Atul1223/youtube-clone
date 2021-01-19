@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     
     var model = Model()
-    var videos = [video]()
+    var videos = [Video]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //MARK: - ModelDelegate methods
     
-    func videosFetched(_ videos: [video]) {
+    func videosFetched(_ videos: [Video]) {
         
         //Set the returned video to our video property
         self.videos = videos
@@ -52,13 +52,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VIDEOCELL_ID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VIDEOCELL_ID, for: indexPath) as! VideoTableViewCell
         
         //configure the cell with data
-        //get the title for the video in question
-        let title = self.videos[indexPath.row].title
         
-        cell.textLabel?.text = title
+        let video = self.videos[indexPath.row]
+        
+        cell.setcell(video)
         
         
         //return the cell

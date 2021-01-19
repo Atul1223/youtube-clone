@@ -9,7 +9,7 @@ import Foundation
 
 struct  Response : Decodable {
     
-    var items:[video]?
+    var items:[Video]?
     
     enum CodingKeys: String, CodingKey {
         
@@ -20,7 +20,7 @@ struct  Response : Decodable {
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        self.items = try container.decode([video].self, forKey: .items)
+        self.items = try container.decode([Video].self, forKey: .items)
         
     }
     

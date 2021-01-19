@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ModelDelegate {
-    func videosFetched(_ videos:[video])
+    func videosFetched(_ videos:[Video])
 }
 
 class Model {
