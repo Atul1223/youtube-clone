@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2D72E2BC25B7341D00CDC795 /* CasheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D72E2BB25B7341D00CDC795 /* CasheManager.swift */; };
+		2D72E2BF25B737FA00CDC795 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D72E2BE25B737FA00CDC795 /* DetailedViewController.swift */; };
+		2D72E2CB25B7415A00CDC795 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D72E2C425B73B3A00CDC795 /* WebKit.framework */; };
 		2D78D02D25AB4F6600030012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78D02C25AB4F6600030012 /* AppDelegate.swift */; };
 		2D78D02F25AB4F6600030012 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78D02E25AB4F6600030012 /* SceneDelegate.swift */; };
 		2D78D03125AB4F6600030012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78D03025AB4F6600030012 /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		2D72E2BB25B7341D00CDC795 /* CasheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasheManager.swift; sourceTree = "<group>"; };
+		2D72E2BE25B737FA00CDC795 /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
+		2D72E2C425B73B3A00CDC795 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		2D78D02925AB4F6600030012 /* youtube-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtube-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D78D02C25AB4F6600030012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D78D02E25AB4F6600030012 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,17 +49,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D72E2CB25B7415A00CDC795 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D72E2C325B73B3A00CDC795 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D72E2C425B73B3A00CDC795 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2D78D02025AB4F6600030012 = {
 			isa = PBXGroup;
 			children = (
 				2D78D02B25AB4F6600030012 /* youtube-clone */,
 				2D78D02A25AB4F6600030012 /* Products */,
+				2D72E2C325B73B3A00CDC795 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,7 +91,6 @@
 				2D78D05C25B728A700030012 /* Models */,
 				2D78D05B25B7289600030012 /* Views */,
 				2D78D05A25B7288400030012 /* View controllers */,
-				2D78D03025AB4F6600030012 /* ViewController.swift */,
 				2D78D03525AB4F6700030012 /* Assets.xcassets */,
 				2D78D03A25AB4F6700030012 /* Info.plist */,
 			);
@@ -87,6 +100,8 @@
 		2D78D05A25B7288400030012 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2D72E2BE25B737FA00CDC795 /* DetailedViewController.swift */,
+				2D78D03025AB4F6600030012 /* ViewController.swift */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -201,6 +216,7 @@
 				2D72E2BC25B7341D00CDC795 /* CasheManager.swift in Sources */,
 				2D78D03125AB4F6600030012 /* ViewController.swift in Sources */,
 				2D78D02D25AB4F6600030012 /* AppDelegate.swift in Sources */,
+				2D72E2BF25B737FA00CDC795 /* DetailedViewController.swift in Sources */,
 				2D78D02F25AB4F6600030012 /* SceneDelegate.swift in Sources */,
 				2D78D05425B0965800030012 /* ConstantsTemplate.swift in Sources */,
 				2D78D04925AD748100030012 /* Model.swift in Sources */,
